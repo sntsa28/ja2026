@@ -1,7 +1,6 @@
 :root {
   --azul: #1f3b63;
   --azul-oscuro: #132847;
-  --verde: #ff7a18;
   --verde: #046307;
   --gris: #f2f5f8;
   --texto: #1f2933;
@@ -207,43 +206,87 @@ footer {
 
 @media (max-width: 600px) {
   .site-header {
-    position: relative;
+    position: sticky;
+    top: 0;
+  }
+
+  .brand {
+    padding: 6px 10px;
   }
 
   .logos-superiores {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
   }
 
-  .membrete,
+  .membrete {
+    width: 54%;
+    max-width: none;
+    max-height: 78px;
+  }
+
   .logos {
-    width: 100%;
-    max-width: 440px;
+    width: 42%;
+    max-width: none;
+    max-height: 68px;
   }
 
   .menu {
-    position: sticky;
-    top: 0;
-    z-index: 1001;
-    gap: 6px;
-    padding: 10px 6px;
+    position: static;
+    gap: 4px;
+    padding: 7px 4px;
   }
 
   .menu a {
-    padding: 8px 10px;
-    font-size: 0.9rem;
+    padding: 7px 8px;
+    font-size: 0.82rem;
   }
 
   .section {
-    scroll-margin-top: 70px;
-    padding: 48px 5%;
+    scroll-margin-top: 125px;
+    padding: 34px 5%;
   }
 
   .section h2 {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
+    margin-bottom: 20px;
   }
 
   .cards {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cards .card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  .ponente {
+    width: min(100%, 240px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .membrete {
+    max-height: 66px;
+  }
+
+  .logos {
+    max-height: 58px;
+  }
+
+  .menu a {
+    padding: 6px 7px;
+    font-size: 0.76rem;
+  }
+
+  .ponente {
+    width: min(100%, 215px);
   }
 }
